@@ -5,7 +5,7 @@ from cinema.models import (
     Actor,
     CinemaHall,
     Movie,
-    MovieSession,
+    MovieSession, Ticket,
 )
 
 class GenreSerializer(serializers.ModelSerializer):
@@ -103,3 +103,18 @@ class MovieSessionListSerializer(MovieSessionSerializer):
             "cinema_hall_capacity",
             "tickets_available",
         )
+
+class TicketSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Ticket
+        fields = ("id", "row", "seat", "movie_session")
+
+
+class TicketListSerializer(TicketSerializer):
+    movie_session = MovieSessionListSerializer(many=False, read_only=True)
+
+
+class TicketSeatsSerializer(TicketSerializer):
+    class Meta:
+        model = Ticket
+        fields = ("row", "seat")
