@@ -59,5 +59,5 @@ The Cinema API provides the following features:
 - Adding movie sessions 
 - Filtering movies and movie sessions
 
-![Swagger Image](file:///C:/Users/HP/projects/cinema/readme_media/swagger.png)
-![Swagger Image](file:///C:/Users/HP/projects/cinema/readme_media/swagger1.png)
+![alt text](./readme_media/swagger.png)
+![alt text](./readme_media/swagger1.png)
