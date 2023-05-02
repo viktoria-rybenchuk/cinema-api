@@ -19,21 +19,16 @@ source venv/bin/activate (on macOS/Linux)
 ```
 pip install -r requirements.txt
 ```
-4. Set environment variables:
-```
-set(Windows), export(Mac/Linux) POSTGRES_HOST=<you db hostaname>
-set(Windows), export(Mac/Linux) POSTGRES_DB=<your db name>
-set(Windows), export(Mac/Linux) POSTGRES_USER=<your db username
-set(Windows), export(Mac/Linux) POSTGRES_PASSWORD=<your db user password>
-```
+4. The **.env.sample** file is provided as a template that you can copy and modify with your own database credentials. You should rename the file to just **.env**, and then replace the placeholder values in the .env file with your actual credentials.
+
+
 5. Run database migrations:
 ```
 python manage.py migrate
-python manage.py runserver
 ```
 6. Start the server:
 ```
-python manage.py migrate
+python manage.py runserver
 ```
 ## Run with Docker
 Docker should be installed
